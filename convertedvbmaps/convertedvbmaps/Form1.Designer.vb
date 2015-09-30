@@ -27,15 +27,18 @@ Partial Class Form1
         '
         'GMapControl1
         '
+        Me.GMapControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GMapControl1.Bearing = 0!
         Me.GMapControl1.CanDragMap = True
         Me.GMapControl1.EmptyTileColor = System.Drawing.Color.Navy
         Me.GMapControl1.GrayScaleMode = False
         Me.GMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow
         Me.GMapControl1.LevelsKeepInMemmory = 5
-        Me.GMapControl1.Location = New System.Drawing.Point(102, 37)
+        Me.GMapControl1.Location = New System.Drawing.Point(48, 41)
         Me.GMapControl1.MarkersEnabled = True
-        Me.GMapControl1.MaxZoom = 2
+        Me.GMapControl1.MaxZoom = 5
         Me.GMapControl1.MinZoom = 2
         Me.GMapControl1.MouseWheelZoomEnabled = True
         Me.GMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter
@@ -49,7 +52,7 @@ Partial Class Form1
         Me.GMapControl1.ShowTileGridLines = False
         Me.GMapControl1.Size = New System.Drawing.Size(150, 150)
         Me.GMapControl1.TabIndex = 0
-        Me.GMapControl1.Zoom = 0R
+        Me.GMapControl1.Zoom = 2.0R
         '
         'Form1
         '
