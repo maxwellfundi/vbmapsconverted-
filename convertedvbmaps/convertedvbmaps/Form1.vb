@@ -14,23 +14,32 @@ Public Class Form1
         ' Placing a marker on a certain position
         Dim markersOverlay = New GMapOverlay("markers")
         Dim markerone = New GMarkerGoogle(New PointLatLng(1, 0), GMarkerGoogleType.green)
+        markerone.ToolTipText = "This is the first marker we put up"
+        markerone.ToolTipMode = MarkerTooltipMode.OnMouseOver
         Dim markertwo = New GMarkerGoogle(New PointLatLng(16, 16), GMarkerGoogleType.blue)
+        markertwo.ToolTipText = "This is the second marker we put up"
+        markertwo.ToolTipMode = MarkerTooltipMode.OnMouseOver
         Dim markerthree = New GMarkerGoogle(New PointLatLng(10, 10), GMarkerGoogleType.yellow)
+        markerthree.ToolTipText = "This is the third marker we put up"
+        markerthree.ToolTipMode = MarkerTooltipMode.OnMouseOver
+        Dim markerfour = New GMarkerGoogle(New PointLatLng(0.06, 34), GMarkerGoogleType.pink)
+        markerfour.ToolTipText = "This is the fourth marker we put up"
+        markerfour.ToolTipMode = MarkerTooltipMode.OnMouseOver
 
         markersOverlay.Markers.Add(markerone)
         markersOverlay.Markers.Add(markertwo)
         markersOverlay.Markers.Add(markerthree)
+        markersOverlay.Markers.Add(markerfour)
         GMapControl1.Overlays.Add(markersOverlay)
-
 
 
         'polygon trial 
         Dim polyOverlay As New GMapOverlay("polygons")
         Dim points As IList(Of PointLatLng) = New List(Of PointLatLng)()
-        points.Add(New PointLatLng(-25.969562, 32.585789))
-        points.Add(New PointLatLng(-25.966205, 32.588171))
-        points.Add(New PointLatLng(-25.968134, 32.591647))
-        points.Add(New PointLatLng(-25.971684, 32.589759))
+        points.Add(New PointLatLng(1, 0))
+        points.Add(New PointLatLng(16, 16))
+        points.Add(New PointLatLng(10, 10))
+        points.Add(New PointLatLng(0.06, 34))
         Dim polygon As New GMapPolygon(points, "mypolygon")
         polygon.Fill = New SolidBrush(Color.FromArgb(50, Color.Red))
         polygon.Stroke = New Pen(Color.Red, 1)
